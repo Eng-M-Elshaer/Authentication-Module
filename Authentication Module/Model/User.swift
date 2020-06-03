@@ -30,7 +30,7 @@ struct ImageCodable: Codable {
     let imageData: Data?
     
     init(withImage image: UIImage) {
-        self.imageData = image.pngData()
+        self.imageData = image.jpegData(compressionQuality: 1.0)
     }
     
     func getImage() -> UIImage? {
