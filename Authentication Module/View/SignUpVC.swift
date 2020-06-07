@@ -28,6 +28,10 @@ class SignUpVC: UITableViewController {
         super.viewDidLoad()
         imagePicker.delegate = self
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        self.navigationItem.setHidesBackButton(true, animated: true)
+    }
 
     // MARK: - Table view data source
 

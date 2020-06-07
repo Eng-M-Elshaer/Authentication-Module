@@ -40,7 +40,8 @@ class MapVC: UIViewController {
     
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
         
-        if sender.state == .ended{
+        if sender.state == .ended {
+            removeAllAnnotations()
             let locationInView = sender.location(in: mapView)
             let tappedCoordinate = mapView.convert(locationInView, toCoordinateFrom: mapView)
             addAnnotation(coordinate: tappedCoordinate)
@@ -54,15 +55,21 @@ class MapVC: UIViewController {
 
 extension MapVC {
     
-    private func addAnnotation(coordinate:CLLocationCoordinate2D){
+    private func removeAllAnnotations() {
+        let allAnnotations = self.mapView.annotations
+        self.mapView.removeAnnotations(allAnnotations)
+    }
+    
+    private func addAnnotation(coordinate:CLLocationCoordinate2D) {
         
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
+        mapView.addAnnotation(annotation)
         getNameOfLocation(lat: coordinate.latitude, long: coordinate.longitude)
         
     }
     
-    private func getNameOfLocation(lat:CLLocationDegrees,long:CLLocationDegrees){
+    private func getNameOfLocation(lat:CLLocationDegrees,long:CLLocationDegrees) {
         
         let location = CLLocation(latitude: lat, longitude: long)
         

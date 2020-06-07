@@ -14,6 +14,15 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
+    private func setNavbar(navigationController:UINavigationController){
+        
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.view.backgroundColor = .clear
+        
+    }
+    
     private func setRootView(){
         
         let userData = UserDefaults.standard.object(forKey: "User")
@@ -24,10 +33,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             if isLoged {
                 let rootVC = mainStoryboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
                 let navigationController = UINavigationController(rootViewController: rootVC)
+                setNavbar(navigationController: navigationController)
                 window?.rootViewController = navigationController
             } else {
                 let rootVC = mainStoryboard.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
                 let navigationController = UINavigationController(rootViewController: rootVC)
+                setNavbar(navigationController: navigationController)
                 window?.rootViewController = navigationController
             }
         }
