@@ -73,6 +73,22 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		E2B29FCC248D454700F4619E /* Manger */ = {
+			isa = PBXGroup;
+			children = (
+				E2E045D7247C085D002644F4 /* Manger.swift */,
+			);
+			path = Manger;
+			sourceTree = "<group>";
+		};
+		E2B29FCD248D455800F4619E /* Resoures */ = {
+			isa = PBXGroup;
+			children = (
+				E2E045C0247BF80D002644F4 /* Assets.xcassets */,
+			);
+			path = Resoures;
+			sourceTree = "<group>";
+		};
 		E2E045AD247BF80B002644F4 = {
 			isa = PBXGroup;
 			children = (
@@ -95,12 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				E2E045B9247BF80B002644F4 /* AppDelegate.swift */,
-				E2E045D7247C085D002644F4 /* Manger.swift */,
 				E2E045CF247BF882002644F4 /* Model */,
 				E2E045CB247BF846002644F4 /* View */,
 				E2E045CC247BF84D002644F4 /* Controller */,
 				E2E045D6247C07B2002644F4 /* Extension */,
-				E2E045C0247BF80D002644F4 /* Assets.xcassets */,
+				E2B29FCC248D454700F4619E /* Manger */,
+				E2B29FCD248D455800F4619E /* Resoures */,
 				E2E045C5247BF80D002644F4 /* Info.plist */,
 			);
 			path = "Authentication Module";
