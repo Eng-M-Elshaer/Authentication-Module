@@ -8,11 +8,15 @@
 
 import Foundation
 
+// MARK: - UserDefaultsKeys.
+
 struct UserDefaultsKeys {
     static var isLogedIn = "UDKisLogedIn"
     static var email = "UDKemail"
     static var user = "UDKuser"
 }
+
+// MARK: - StoryBoard ID.
 
 struct StoryBoard {
     static var main = "Main"

@@ -57,14 +57,14 @@ class SignInVC: UIViewController {
     }
     
     private func goToProfileVC(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "ProfileVC" ) as! ProfileVC
+        let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: StoryBoard.profileVC ) as! ProfileVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
     private func goToSignUpVC(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SignUpVC" ) as! SignUpVC
+        let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: StoryBoard.signUpVC ) as! SignUpVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     

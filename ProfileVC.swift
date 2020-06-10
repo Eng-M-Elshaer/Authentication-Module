@@ -56,8 +56,8 @@ class ProfileVC: UITableViewController {
     }
     
     private func goToSignInVC(){
-        let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "SignInVC" ) as! SignInVC
+        let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: StoryBoard.signInVC ) as! SignInVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
