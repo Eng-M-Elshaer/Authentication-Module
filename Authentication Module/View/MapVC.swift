@@ -9,22 +9,25 @@
 import UIKit
 import MapKit
 
+// MARK: - MapDelegate Protocol.
+
 protocol MapDelegate {
     func setDelailLocationInAddress(delailsAddress: String,tag:Int)
 }
 
 class MapVC: UIViewController {
     
+    // MARK: - Outlets.
+
     @IBOutlet weak var userLocatoinLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
-    //variables
+    // MARK: - Variables.
     var delegate: MapDelegate?
-    let locationManager = CLLocationManager()
-    let regionMeters: Double = 10000
-    var previousLocation:CLLocation?
     lazy var geocoder = CLGeocoder()
     var tag = 0
+
+    // MARK: - LifeCycle Functions.
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +40,8 @@ class MapVC: UIViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
+    
+    // MARK: - Button Functions.
     
     @IBAction func tapGesture(_ sender: UITapGestureRecognizer) {
         
@@ -52,6 +57,8 @@ class MapVC: UIViewController {
         self.navigationController?.popViewController(animated: true)
     }
 }
+
+// MARK: - MapVC Extension.
 
 extension MapVC {
     
@@ -97,31 +104,3 @@ extension MapVC {
         }
     }
 }
-
-extension CLPlacemark {
-    
-    var compactAddress: String? {
-        if let name = name {
-            var result = name
-            
-            if let street = thoroughfare {
-                result += ", \(street)"
-            }
-            
-            if let city = locality {
-                result += ", \(city)"
-            }
-            
-            if let country = country {
-                result += ", \(country)"
-            }
-            
-            return result
-        }
-        
-        return nil
-    }
-}
-
-
-

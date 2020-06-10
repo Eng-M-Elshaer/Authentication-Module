@@ -10,7 +10,7 @@ import UIKit
 
 extension UIViewController {
     
-    // validate an email for the right format
+    /// validate an email for the right format.
     func isValidEmail(email:String?) -> Bool {
         
         guard email != nil else { return false }
@@ -21,6 +21,7 @@ extension UIViewController {
         return pred.evaluate(with: email)
     }
     
+    /// validate on password .
     func isValidPassword(testStr:String?) -> Bool {
         guard testStr != nil else { return false }
         

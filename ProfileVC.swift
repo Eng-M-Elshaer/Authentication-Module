@@ -10,6 +10,8 @@ import UIKit
 
 class ProfileVC: UITableViewController {
     
+    // MARK: - Outlets.
+
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
@@ -19,8 +21,12 @@ class ProfileVC: UITableViewController {
     @IBOutlet weak var userAddressTwoLabel: UILabel!
     @IBOutlet weak var userAddressThreeLabel: UILabel!
     
-    var user = UserDefultsManger.shared.getUserDefaults()
+    // MARK: - Variables.
+
+    var user = UserDefultsManger.shared().getUserDefaults()
     
+    // MARK: - LifeCyclye Funtions.
+
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.set(true, forKey: "isLoged")
@@ -35,6 +41,8 @@ class ProfileVC: UITableViewController {
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
+
+    // MARK: - VC Funtions.
 
     private func setUserData(){
         userImageView.image = user?.image.getImage()
@@ -64,6 +72,7 @@ class ProfileVC: UITableViewController {
         // #warning Incomplete implementation, return the number of rows
         return 9
     }
+    // MARK: - Button Functions.
 
     @IBAction func logOutBtnPressed(_ sender: UIButton) {
         UserDefaults.standard.set(false, forKey: "isLoged")

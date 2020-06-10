@@ -10,11 +10,17 @@ import UIKit
 
 class SignInVC: UIViewController {
 
+    // MARK: - Outlets.
+
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    var user = UserDefultsManger.shared.getUserDefaults()
+    // MARK: - Variables.
+
+    var user = UserDefultsManger.shared().getUserDefaults()
     
+    // MARK: - LifeCycle Functions.
+
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -27,6 +33,8 @@ class SignInVC: UIViewController {
         self.navigationController?.navigationBar.isHidden = false
     }
     
+    // MARK: - VC Functions.
+
     private func isVaildData() -> Bool {
         guard (emailTextField.text?.trimmed) != "" else {
             self.showAlert(title: "Error", message: "Please Enter Email")
@@ -60,6 +68,8 @@ class SignInVC: UIViewController {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    // MARK: - Button Functions.
+
     @IBAction func createAccountBtnPressed(_ sender: UIButton) {
         goToSignUpVC()
     }

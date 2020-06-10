@@ -9,7 +9,7 @@
 import Foundation
 
 extension String {
-    
+    /// add trimmed with whitespacesAndNewlines to string
     var trimmed: String {
         return self.trimmingCharacters(in: .whitespacesAndNewlines)
     }

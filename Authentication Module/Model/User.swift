@@ -14,7 +14,7 @@ enum Gender: String, Codable {
 }
 
 struct User: Codable {
-    var image: ImageCodable!
+    var image: CodableImage!
     var name: String?
     var email: String!
     var phone: String!
@@ -25,7 +25,7 @@ struct User: Codable {
     var addressThree: String?
 }
 
-struct ImageCodable: Codable {
+struct CodableImage: Codable {
     
     let imageData: Data?
     

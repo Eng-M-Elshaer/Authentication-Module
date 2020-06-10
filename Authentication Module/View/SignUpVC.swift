@@ -10,6 +10,8 @@ import UIKit
 
 class SignUpVC: UITableViewController {
     
+    // MARK: - Outlets.
+
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameTextField: UITextField!
     @IBOutlet weak var userEmailTextField: UITextField!
@@ -20,10 +22,14 @@ class SignUpVC: UITableViewController {
     @IBOutlet weak var userAddressTwoTextField: UITextField!
     @IBOutlet weak var userAddressThreeTextField: UITextField!
     
+    // MARK: - Variables.
+
     var user:User!
     var gender:Gender = .female
     let imagePicker = UIImagePickerController()
     
+    // MARK: - LifeCycle Functions.
+
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -45,6 +51,8 @@ class SignUpVC: UITableViewController {
         return 10
     }
     
+    // MARK: - VC Functions.
+
     private func goToSignInVC(){
         let sb = UIStoryboard(name: "Main", bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
@@ -87,6 +95,8 @@ class SignUpVC: UITableViewController {
         return true
     }
     
+    // MARK: - Button Functions.
+
     @IBAction func userGenderSwitchChanged(_ sender: UISwitch) {
         if sender.isOn {
             gender = .female
@@ -97,7 +107,7 @@ class SignUpVC: UITableViewController {
     
     @IBAction func addressBtnPressed(_ sender: UIButton) {
         let sb = UIStoryboard(name: "Main", bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: "MapVC" ) as! MapVC
+        let vc = sb.instantiateViewController(withIdentifier: "MapCenterVC" ) as! MapCenterVC
         vc.delegate = self
         vc.tag = sender.tag
         self.navigationController?.pushViewController(vc, animated: true)
@@ -112,17 +122,19 @@ class SignUpVC: UITableViewController {
     @IBAction func signUpBtnPressed(_ sender: UIButton) {
         if isVaildData() {
             if isValidRegax() {
-                user = User(image: ImageCodable(withImage: userImageView.image!), name: userNameTextField.text,
+                user = User(image: CodableImage(withImage: userImageView.image!), name: userNameTextField.text,
                             email: userEmailTextField.text,
                             phone: userPhoneTextField.text, password: userPasswordTextField.text, gender: gender,
                             addressOne: userAddressOneTextField.text, addressTwo: userAddressTwoTextField.text,
                             addressThree: userAddressThreeTextField.text)
-                UserDefultsManger.shared.setUserDefaults(user: user)
+                UserDefultsManger.shared().setUserDefaults(user: user)
                 goToSignInVC()
             }
         }
     }
 }
+
+// MARK: - Image Picker Extension.
 
 extension SignUpVC:UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
@@ -140,7 +152,9 @@ extension SignUpVC:UIImagePickerControllerDelegate,UINavigationControllerDelegat
     
 }
 
-extension SignUpVC:MapDelegate {
+// MARK: - MapCenterDelegate Extension.
+
+extension SignUpVC: MapCenterDelegate {
     func setDelailLocationInAddress(delailsAddress: String, tag: Int) {
         switch tag {
         case 1:
