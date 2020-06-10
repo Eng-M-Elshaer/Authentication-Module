@@ -15,9 +15,10 @@ struct UserDefaultsKeys {
 }
 
 struct StoryBoard {
-    static var SignUpVC = "SignUpVC"
-    static var MapVC = "MapVC"
-    static var MapCenterVC = "MapCenterVC"
-    static var SignInVC = "SignInVC"
-    static var ProfileVC = "ProfileVC"
+    static var main = "Main"
+    static var signUpVC = "SignUpVC"
+    static var mapVC = "MapVC"
+    static var mapCenterVC = "MapCenterVC"
+    static var signInVC = "SignInVC"
+    static var profileVC = "ProfileVC"
 }
