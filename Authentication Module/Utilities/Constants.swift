@@ -20,6 +20,11 @@ struct UserDefaultsKeys {
 
 struct StoryBoard {
     static var main = "Main"
+}
+
+// MARK: - ViewController ID.
+
+struct ViewController {
     static var signUpVC = "SignUpVC"
     static var mapVC = "MapVC"
     static var mapCenterVC = "MapCenterVC"

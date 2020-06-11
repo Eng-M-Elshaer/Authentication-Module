@@ -16,7 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func setNavbar(navigationController:UINavigationController){
         
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default) //UIImage.init(named: "transparent.png")
+        /// UIImage.init(named: "transparent.png")
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
         navigationController.navigationBar.shadowImage = UIImage()
         navigationController.navigationBar.isTranslucent = true
         navigationController.view.backgroundColor = .clear

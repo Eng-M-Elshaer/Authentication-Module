@@ -55,7 +55,7 @@ class SignUpVC: UITableViewController {
 
     private func goToSignInVC(){
         let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: StoryBoard.signInVC) as! SignInVC
+        let vc = sb.instantiateViewController(withIdentifier: ViewController.signInVC) as! SignInVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
@@ -107,7 +107,7 @@ class SignUpVC: UITableViewController {
     
     @IBAction func addressBtnPressed(_ sender: UIButton) {
         let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: StoryBoard.mapCenterVC) as! MapCenterVC
+        let vc = sb.instantiateViewController(withIdentifier: ViewController.mapCenterVC) as! MapCenterVC
         vc.delegate = self
         vc.tag = sender.tag
         self.navigationController?.pushViewController(vc, animated: true)
