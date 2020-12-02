@@ -11,7 +11,6 @@ import UIKit
 class ProfileVC: UITableViewController {
     
     // MARK: - Outlets.
-
     @IBOutlet weak var userImageView: UIImageView!
     @IBOutlet weak var userNameLabel: UILabel!
     @IBOutlet weak var userEmailLabel: UILabel!
@@ -22,28 +21,41 @@ class ProfileVC: UITableViewController {
     @IBOutlet weak var userAddressThreeLabel: UILabel!
     
     // MARK: - Variables.
-
     var user = UserDefultsManger.shared().getUserDefaults()
     
-    // MARK: - LifeCyclye Funtions.
-
+    // MARK: - LifeCyclye Methods.
     override func viewDidLoad() {
         super.viewDidLoad()
         UserDefaults.standard.set(true, forKey: "isLoged")
     }
-    
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
         setUserData()
     }
-    
-    
     override func viewWillDisappear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = false
     }
+    
+    // MARK: - Actions.
+    @IBAction func logOutBtnPressed(_ sender: UIButton) {
+        UserDefaults.standard.set(false, forKey: "isLoged")
+        goToSignInVC()
+    }
+    
+}
 
-    // MARK: - VC Funtions.
+// MARK: - Table view data source
+extension ProfileVC {
+    override func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 9
+    }
+}
 
+// MARK: - Private Methods.
+extension ProfileVC {
     private func setUserData(){
         userImageView.image = user?.image.getImage()
         userNameLabel.text = user?.name
@@ -60,23 +72,4 @@ class ProfileVC: UITableViewController {
         let vc = sb.instantiateViewController(withIdentifier: ViewController.signInVC ) as! SignInVC
         self.navigationController?.pushViewController(vc, animated: true)
     }
-    
-    // MARK: - Table view data source
-
-    override func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
-        return 1
-    }
-
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
-        return 9
-    }
-    // MARK: - Button Functions.
-
-    @IBAction func logOutBtnPressed(_ sender: UIButton) {
-        UserDefaults.standard.set(false, forKey: "isLoged")
-        goToSignInVC()
-    }
-    
 }

@@ -14,39 +14,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
     
-    private func setNavbar(navigationController:UINavigationController){
-        
-        /// UIImage.init(named: "transparent.png")
-        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
-        navigationController.navigationBar.shadowImage = UIImage()
-        navigationController.navigationBar.isTranslucent = true
-        navigationController.view.backgroundColor = .clear
-        
-    }
-    
-    private func setRootView(){
-        
-        let userData = UserDefaults.standard.object(forKey: "User")
-        let isLoged = UserDefaults.standard.bool(forKey: "isLoged")
-        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        
-        if userData != nil {
-            if isLoged {
-                let rootVC = mainStoryboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
-                let navigationController = UINavigationController(rootViewController: rootVC)
-                setNavbar(navigationController: navigationController)
-                window?.rootViewController = navigationController
-            } else {
-                let rootVC = mainStoryboard.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
-                let navigationController = UINavigationController(rootViewController: rootVC)
-                setNavbar(navigationController: navigationController)
-                window?.rootViewController = navigationController
-            }
-        }
-    }
-
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
         setRootView()
         IQKeyboardManager.shared.enable = true
         return true
@@ -73,7 +41,42 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     func applicationWillTerminate(_ application: UIApplication) {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
-
-
 }
 
+// MARK:- Private Method
+extension AppDelegate {
+    private func setNavbar(navigationController:UINavigationController){
+        /// UIImage.init(named: "transparent.png")
+        navigationController.navigationBar.setBackgroundImage(UIImage(), for: .default)
+        navigationController.navigationBar.shadowImage = UIImage()
+        navigationController.navigationBar.isTranslucent = true
+        navigationController.view.backgroundColor = .clear
+    }
+    private func swithToMainState(_ mainStoryboard: UIStoryboard){
+        let rootVC = mainStoryboard.instantiateViewController(withIdentifier: "ProfileVC") as! ProfileVC
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        setNavbar(navigationController: navigationController)
+        window?.rootViewController = navigationController
+    }
+    private func swithToAuthState(_ mainStoryboard: UIStoryboard){
+        let rootVC = mainStoryboard.instantiateViewController(withIdentifier: "SignInVC") as! SignInVC
+        let navigationController = UINavigationController(rootViewController: rootVC)
+        setNavbar(navigationController: navigationController)
+        window?.rootViewController = navigationController
+    }
+    
+    private func setRootView(){
+        
+        let userData = UserDefaults.standard.object(forKey: "User")
+        let isLoged = UserDefaults.standard.bool(forKey: "isLoged")
+        let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        
+        if userData != nil {
+            if isLoged {
+               swithToMainState(mainStoryboard)
+            } else {
+               swithToAuthState(mainStoryboard)
+            }
+        }
+    }
+}

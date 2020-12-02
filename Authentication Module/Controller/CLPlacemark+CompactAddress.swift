@@ -9,7 +9,6 @@
 import MapKit
 
 extension CLPlacemark {
-    
     var compactAddress: String? {
         if let name = name {
             var result = name

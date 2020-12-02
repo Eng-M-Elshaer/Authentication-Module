@@ -10,7 +10,6 @@ import UIKit
 import MapKit
 
 // MARK: - MapCenterDelegate Protocol.
-
 protocol MapCenterDelegate {
     func setDelailLocationInAddress(delailsAddress: String,tag:Int)
 }
@@ -18,33 +17,26 @@ protocol MapCenterDelegate {
 class MapCenterVC: UIViewController {
 
     // MARK: - Outlets.
-
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var userLocationLabel: UILabel!
     
     // MARK: - Variables.
-
     var delegate: MapCenterDelegate?
     lazy var geocoder = CLGeocoder()
     var tag = 0
     
-    // MARK: - LifeCycle Functions.
-
+    // MARK: - LifeCycle Methods.
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-    
     override func viewWillAppear(_ animated: Bool) {
-          self.navigationController?.navigationBar.isHidden = true
-      }
-      
-      override func viewWillDisappear(_ animated: Bool) {
-          self.navigationController?.navigationBar.isHidden = false
-      }
+        self.navigationController?.navigationBar.isHidden = true
+    }
+    override func viewWillDisappear(_ animated: Bool) {
+        self.navigationController?.navigationBar.isHidden = false
+    }
 
-    // MARK: - Button Functions.
-
+    // MARK: - Actions.
     @IBAction func submitBtnPressed(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -52,9 +44,7 @@ class MapCenterVC: UIViewController {
 
 
 // MARK: - MKMapViewDelegate Extension.
-
 extension MapCenterVC: MKMapViewDelegate {
-    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
            let center = mapView.centerCoordinate
            print(center)
@@ -63,9 +53,7 @@ extension MapCenterVC: MKMapViewDelegate {
 }
 
 // MARK: - MapCenterVC Extension.
-
 extension MapCenterVC {
-    
     private func getNameOfLocation(lat:CLLocationDegrees,long:CLLocationDegrees) {
         
         let location = CLLocation(latitude: lat, longitude: long)
@@ -75,14 +63,12 @@ extension MapCenterVC {
             // Process Response
             self.processResponse(withPlacemarks: placemarks, error: error)
         }
-        
     }
     
     private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
         
         if error != nil {
             userLocationLabel.text = "Unable to Find Address for Location"
-            
         } else {
             if let placemarks = placemarks, let placemark = placemarks.first {
                 userLocationLabel.text = placemark.compactAddress ?? ""
@@ -94,7 +80,3 @@ extension MapCenterVC {
         }
     }
 }
-
-
-
-

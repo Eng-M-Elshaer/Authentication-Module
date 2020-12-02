@@ -17,7 +17,7 @@
 		E2E045C4247BF80D002644F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E045C2247BF80D002644F4 /* LaunchScreen.storyboard */; };
 		E2E045CE247BF877002644F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045CD247BF877002644F4 /* User.swift */; };
 		E2E045D3247C0283002644F4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045D2247C0283002644F4 /* SignUpVC.swift */; };
-		E2E045D8247C085D002644F4 /* Manger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045D7247C085D002644F4 /* Manger.swift */; };
+		E2E045D8247C085D002644F4 /* UserDefultsManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045D7247C085D002644F4 /* UserDefultsManger.swift */; };
 		E2E045DA247C09FB002644F4 /* UIViewContoller+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045D9247C09FB002644F4 /* UIViewContoller+Validation.swift */; };
 		E2E045DC247C0FA5002644F4 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045DB247C0FA5002644F4 /* SignInVC.swift */; };
 		E2E045DE247C1319002644F4 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045DD247C1319002644F4 /* MapVC.swift */; };
@@ -39,7 +39,7 @@
 		E2E045C5247BF80D002644F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E045CD247BF877002644F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		E2E045D2247C0283002644F4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpVC.swift; path = "Authentication Module/View/SignUpVC.swift"; sourceTree = SOURCE_ROOT; };
-		E2E045D7247C085D002644F4 /* Manger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Manger.swift; sourceTree = "<group>"; };
+		E2E045D7247C085D002644F4 /* UserDefultsManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefultsManger.swift; sourceTree = "<group>"; };
 		E2E045D9247C09FB002644F4 /* UIViewContoller+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+Validation.swift"; sourceTree = "<group>"; };
 		E2E045DB247C0FA5002644F4 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInVC.swift; path = "Authentication Module/View/SignInVC.swift"; sourceTree = SOURCE_ROOT; };
 		E2E045DD247C1319002644F4 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = "Authentication Module/View/MapVC.swift"; sourceTree = SOURCE_ROOT; };
@@ -90,7 +90,7 @@
 		E2B29FCC248D454700F4619E /* Manger */ = {
 			isa = PBXGroup;
 			children = (
-				E2E045D7247C085D002644F4 /* Manger.swift */,
+				E2E045D7247C085D002644F4 /* UserDefultsManger.swift */,
 			);
 			path = Manger;
 			sourceTree = "<group>";
@@ -295,7 +295,7 @@
 				E2E045E4247C1BF7002644F4 /* String+Trimed.swift in Sources */,
 				E26022A3249009F500519D7E /* CLPlacemark+CompactAddress.swift in Sources */,
 				E2E045BA247BF80B002644F4 /* AppDelegate.swift in Sources */,
-				E2E045D8247C085D002644F4 /* Manger.swift in Sources */,
+				E2E045D8247C085D002644F4 /* UserDefultsManger.swift in Sources */,
 				E26022A1249008C400519D7E /* MapCenterVC.swift in Sources */,
 				E2E045DC247C0FA5002644F4 /* SignInVC.swift in Sources */,
 				E2E045D3247C0283002644F4 /* SignUpVC.swift in Sources */,
