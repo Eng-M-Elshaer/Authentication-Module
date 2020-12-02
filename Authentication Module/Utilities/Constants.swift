@@ -9,21 +9,18 @@
 import Foundation
 
 // MARK: - UserDefaultsKeys.
-
 struct UserDefaultsKeys {
     static var isLogedIn = "UDKisLogedIn"
     static var email = "UDKemail"
     static var user = "UDKuser"
 }
 
-// MARK: - StoryBoard ID.
-
+// MARK: - StoryBoard.
 struct StoryBoard {
     static var main = "Main"
 }
 
-// MARK: - ViewController ID.
-
+// MARK: - ViewController.
 struct ViewController {
     static var signUpVC = "SignUpVC"
     static var mapVC = "MapVC"
