@@ -9,18 +9,18 @@
 /* Begin PBXBuildFile section */
 		9D6083EEBD33DE1A28708370 /* Pods_Authentication_Module.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E9F6F1E7317F853411A6C1C2 /* Pods_Authentication_Module.framework */; };
 		E213250C24910B7900493E53 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = E213250B24910B7900493E53 /* Constants.swift */; };
-		E26022A1249008C400519D7E /* MapCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26022A0249008C400519D7E /* MapCenterVC.swift */; };
+		E253ED80257822CB00537075 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253ED7F257822CB00537075 /* SignUpVC.swift */; };
+		E253ED86257822DC00537075 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253ED83257822DC00537075 /* SignInVC.swift */; };
+		E253ED87257822DC00537075 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253ED84257822DC00537075 /* MapVC.swift */; };
+		E253ED88257822DC00537075 /* MapCenterVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E253ED85257822DC00537075 /* MapCenterVC.swift */; };
 		E26022A3249009F500519D7E /* CLPlacemark+CompactAddress.swift in Sources */ = {isa = PBXBuildFile; fileRef = E26022A2249009F500519D7E /* CLPlacemark+CompactAddress.swift */; };
 		E2E045BA247BF80B002644F4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045B9247BF80B002644F4 /* AppDelegate.swift */; };
 		E2E045BF247BF80B002644F4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E045BD247BF80B002644F4 /* Main.storyboard */; };
 		E2E045C1247BF80D002644F4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E2E045C0247BF80D002644F4 /* Assets.xcassets */; };
 		E2E045C4247BF80D002644F4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E2E045C2247BF80D002644F4 /* LaunchScreen.storyboard */; };
 		E2E045CE247BF877002644F4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045CD247BF877002644F4 /* User.swift */; };
-		E2E045D3247C0283002644F4 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045D2247C0283002644F4 /* SignUpVC.swift */; };
 		E2E045D8247C085D002644F4 /* UserDefultsManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045D7247C085D002644F4 /* UserDefultsManger.swift */; };
 		E2E045DA247C09FB002644F4 /* UIViewContoller+Validation.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045D9247C09FB002644F4 /* UIViewContoller+Validation.swift */; };
-		E2E045DC247C0FA5002644F4 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045DB247C0FA5002644F4 /* SignInVC.swift */; };
-		E2E045DE247C1319002644F4 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045DD247C1319002644F4 /* MapVC.swift */; };
 		E2E045E2247C136A002644F4 /* ProfileVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045E1247C136A002644F4 /* ProfileVC.swift */; };
 		E2E045E4247C1BF7002644F4 /* String+Trimed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045E3247C1BF7002644F4 /* String+Trimed.swift */; };
 		E2E045E6247C1D64002644F4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045E5247C1D64002644F4 /* UIViewController+Alert.swift */; };
@@ -29,7 +29,10 @@
 /* Begin PBXFileReference section */
 		BB7EEA966C2EFEE2A1F67F7C /* Pods-Authentication Module.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authentication Module.debug.xcconfig"; path = "Target Support Files/Pods-Authentication Module/Pods-Authentication Module.debug.xcconfig"; sourceTree = "<group>"; };
 		E213250B24910B7900493E53 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		E26022A0249008C400519D7E /* MapCenterVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapCenterVC.swift; path = "Authentication Module/View/MapCenterVC.swift"; sourceTree = SOURCE_ROOT; };
+		E253ED7F257822CB00537075 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		E253ED83257822DC00537075 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		E253ED84257822DC00537075 /* MapVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
+		E253ED85257822DC00537075 /* MapCenterVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapCenterVC.swift; sourceTree = "<group>"; };
 		E26022A2249009F500519D7E /* CLPlacemark+CompactAddress.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = "CLPlacemark+CompactAddress.swift"; path = "Authentication Module/Controller/CLPlacemark+CompactAddress.swift"; sourceTree = SOURCE_ROOT; };
 		E2E045B6247BF80B002644F4 /* Authentication Module.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Authentication Module.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E2E045B9247BF80B002644F4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -38,11 +41,8 @@
 		E2E045C3247BF80D002644F4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E2E045C5247BF80D002644F4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E2E045CD247BF877002644F4 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
-		E2E045D2247C0283002644F4 /* SignUpVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignUpVC.swift; path = "Authentication Module/View/SignUpVC.swift"; sourceTree = SOURCE_ROOT; };
 		E2E045D7247C085D002644F4 /* UserDefultsManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefultsManger.swift; sourceTree = "<group>"; };
 		E2E045D9247C09FB002644F4 /* UIViewContoller+Validation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIViewContoller+Validation.swift"; sourceTree = "<group>"; };
-		E2E045DB247C0FA5002644F4 /* SignInVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SignInVC.swift; path = "Authentication Module/View/SignInVC.swift"; sourceTree = SOURCE_ROOT; };
-		E2E045DD247C1319002644F4 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = MapVC.swift; path = "Authentication Module/View/MapVC.swift"; sourceTree = SOURCE_ROOT; };
 		E2E045E1247C136A002644F4 /* ProfileVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileVC.swift; sourceTree = SOURCE_ROOT; };
 		E2E045E3247C1BF7002644F4 /* String+Trimed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Trimed.swift"; sourceTree = "<group>"; };
 		E2E045E5247C1D64002644F4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
@@ -87,6 +87,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		E253ED792578221100537075 /* Asset */ = {
+			isa = PBXGroup;
+			children = (
+				E2E045C0247BF80D002644F4 /* Assets.xcassets */,
+			);
+			path = Asset;
+			sourceTree = "<group>";
+		};
 		E2B29FCC248D454700F4619E /* Manger */ = {
 			isa = PBXGroup;
 			children = (
@@ -98,7 +106,8 @@
 		E2B29FCD248D455800F4619E /* Resoures */ = {
 			isa = PBXGroup;
 			children = (
-				E2E045C0247BF80D002644F4 /* Assets.xcassets */,
+				E2E045CB247BF846002644F4 /* Stroyboard */,
+				E253ED792578221100537075 /* Asset */,
 			);
 			path = Resoures;
 			sourceTree = "<group>";
@@ -126,7 +135,6 @@
 			children = (
 				E2E045B9247BF80B002644F4 /* AppDelegate.swift */,
 				E2E045CF247BF882002644F4 /* Model */,
-				E2E045CB247BF846002644F4 /* View */,
 				E2E045CC247BF84D002644F4 /* Controller */,
 				E2E045D6247C07B2002644F4 /* Extension */,
 				E2B29FCC248D454700F4619E /* Manger */,
@@ -137,22 +145,22 @@
 			path = "Authentication Module";
 			sourceTree = "<group>";
 		};
-		E2E045CB247BF846002644F4 /* View */ = {
+		E2E045CB247BF846002644F4 /* Stroyboard */ = {
 			isa = PBXGroup;
 			children = (
 				E2E045BD247BF80B002644F4 /* Main.storyboard */,
 				E2E045C2247BF80D002644F4 /* LaunchScreen.storyboard */,
 			);
-			path = View;
+			path = Stroyboard;
 			sourceTree = "<group>";
 		};
 		E2E045CC247BF84D002644F4 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				E2E045D2247C0283002644F4 /* SignUpVC.swift */,
-				E2E045DD247C1319002644F4 /* MapVC.swift */,
-				E26022A0249008C400519D7E /* MapCenterVC.swift */,
-				E2E045DB247C0FA5002644F4 /* SignInVC.swift */,
+				E253ED7F257822CB00537075 /* SignUpVC.swift */,
+				E253ED85257822DC00537075 /* MapCenterVC.swift */,
+				E253ED84257822DC00537075 /* MapVC.swift */,
+				E253ED83257822DC00537075 /* SignInVC.swift */,
 				E2E045E1247C136A002644F4 /* ProfileVC.swift */,
 			);
 			path = Controller;
@@ -292,16 +300,16 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E253ED80257822CB00537075 /* SignUpVC.swift in Sources */,
+				E253ED87257822DC00537075 /* MapVC.swift in Sources */,
 				E2E045E4247C1BF7002644F4 /* String+Trimed.swift in Sources */,
 				E26022A3249009F500519D7E /* CLPlacemark+CompactAddress.swift in Sources */,
 				E2E045BA247BF80B002644F4 /* AppDelegate.swift in Sources */,
+				E253ED86257822DC00537075 /* SignInVC.swift in Sources */,
+				E253ED88257822DC00537075 /* MapCenterVC.swift in Sources */,
 				E2E045D8247C085D002644F4 /* UserDefultsManger.swift in Sources */,
-				E26022A1249008C400519D7E /* MapCenterVC.swift in Sources */,
-				E2E045DC247C0FA5002644F4 /* SignInVC.swift in Sources */,
-				E2E045D3247C0283002644F4 /* SignUpVC.swift in Sources */,
 				E213250C24910B7900493E53 /* Constants.swift in Sources */,
 				E2E045E2247C136A002644F4 /* ProfileVC.swift in Sources */,
-				E2E045DE247C1319002644F4 /* MapVC.swift in Sources */,
 				E2E045CE247BF877002644F4 /* User.swift in Sources */,
 				E2E045DA247C09FB002644F4 /* UIViewContoller+Validation.swift in Sources */,
 				E2E045E6247C1D64002644F4 /* UIViewController+Alert.swift in Sources */,
