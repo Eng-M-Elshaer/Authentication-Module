@@ -41,7 +41,6 @@ class ProfileVC: UITableViewController {
         UserDefaults.standard.set(false, forKey: "isLoged")
         goToSignInVC()
     }
-    
 }
 
 // MARK: - Table view data source
@@ -66,7 +65,6 @@ extension ProfileVC {
         userAddressTwoLabel.text = user?.addressTwo
         userAddressThreeLabel.text = user?.addressThree
     }
-    
     private func goToSignInVC(){
         let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
         let vc = sb.instantiateViewController(withIdentifier: ViewController.signInVC ) as! SignInVC
