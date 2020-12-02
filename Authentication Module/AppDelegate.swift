@@ -64,7 +64,6 @@ extension AppDelegate {
         setNavbar(navigationController: navigationController)
         window?.rootViewController = navigationController
     }
-    
     private func setRootView(){
         
         let userData = UserDefaults.standard.object(forKey: "User")
