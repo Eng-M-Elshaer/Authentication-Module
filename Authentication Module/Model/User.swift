@@ -8,11 +8,12 @@
 
 import UIKit
 
+// MARK:- Gender
 enum Gender: String, Codable {
     case male
     case female
 }
-
+// MARK:- User
 struct User: Codable {
     var image: CodableImage!
     var name: String?
@@ -25,6 +26,7 @@ struct User: Codable {
     var addressThree: String?
 }
 
+// MARK:- CodableImage
 struct CodableImage: Codable {
     
     let imageData: Data?

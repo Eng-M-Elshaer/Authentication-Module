@@ -20,7 +20,7 @@ class MapVC: UIViewController {
     @IBOutlet weak var userLocatoinLabel: UILabel!
     @IBOutlet weak var mapView: MKMapView!
     
-    // MARK: - Variables.
+    // MARK:- Properties
     var delegate: MapDelegate?
     lazy var geocoder = CLGeocoder()
     var tag = 0
@@ -45,37 +45,31 @@ class MapVC: UIViewController {
             addAnnotation(coordinate: tappedCoordinate)
         }
     }
-    @IBAction func submitBtnPressed(_ sender: Any) {
+    @IBAction func submitBtnTapped(_ sender: UIButton) {
         self.navigationController?.popViewController(animated: true)
     }
 }
 
 // MARK: - MapVC Methods.
 extension MapVC {
-
     private func removeAllAnnotations() {
         let allAnnotations = self.mapView.annotations
         self.mapView.removeAnnotations(allAnnotations)
     }
     private func addAnnotation(coordinate:CLLocationCoordinate2D) {
-        
         let annotation = MKPointAnnotation()
         annotation.coordinate = coordinate
         mapView.addAnnotation(annotation)
         getNameOfLocation(lat: coordinate.latitude, long: coordinate.longitude)
-        
     }
     private func getNameOfLocation(lat:CLLocationDegrees,long:CLLocationDegrees) {
-        
         let location = CLLocation(latitude: lat, longitude: long)
-        
         // Geocode Location
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
             // Process Response
             self.processResponse(withPlacemarks: placemarks, error: error)
         }
     }
-    
     private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
         
         if error != nil {

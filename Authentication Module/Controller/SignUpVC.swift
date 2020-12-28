@@ -21,12 +21,12 @@ class SignUpVC: UITableViewController {
     @IBOutlet weak var userAddressTwoTextField: UITextField!
     @IBOutlet weak var userAddressThreeTextField: UITextField!
     
-    // MARK: - Variables.
+    // MARK:- Properties
     var user: User!
     var gender: Gender = .female
     let imagePicker = UIImagePickerController()
     
-    // MARK: - LifeCycle Mehtods.
+    // MARK: - Lifecycle Mehtods.
     override func viewDidLoad() {
         super.viewDidLoad()
         imagePicker.delegate = self
@@ -100,7 +100,7 @@ extension SignUpVC: MapCenterDelegate {
     }
 }
 
-// MARK: - Table view data source
+// MARK: - Table View Data Source
 extension SignUpVC {
     override func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -113,11 +113,10 @@ extension SignUpVC {
 // MARK: - Private Methods.
 extension SignUpVC {
     private func goToSignInVC(){
-        let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: ViewController.signInVC) as! SignInVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        let mainStoryBoard = UIStoryboard(name: StoryBoard.main, bundle: nil)
+        let signInVC = mainStoryBoard.instantiateViewController(withIdentifier: ViewController.signInVC) as! SignInVC
+        self.navigationController?.pushViewController(signInVC, animated: true)
     }
-    
     private func isVaildData() -> Bool {
         guard (userEmailTextField.text?.trimmed) != "" else {
             self.showAlert(title: "Error", message: "Please Enter Email")
@@ -141,7 +140,6 @@ extension SignUpVC {
         }
         return true
     }
-    
     private func isValidRegax() -> Bool {
         guard isValidEmail(email: userEmailTextField.text?.trimmed) else {
             self.showAlert(title: "Error", message: "Enter Vaild Email")

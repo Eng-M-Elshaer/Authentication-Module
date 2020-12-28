@@ -10,13 +10,15 @@ import Foundation
 
 class UserDefultsManger {
     
+    // MARK:- Singleton
     private static let sharedInstance = UserDefultsManger()
     
-    let defaults = UserDefaults.standard
-
     class func shared() -> UserDefultsManger {
         return UserDefultsManger.sharedInstance
     }
+
+    // MARK:- Properties
+    private let defaults = UserDefaults.standard
 
     var isLogedIn: Bool  {
         set {
@@ -29,7 +31,6 @@ class UserDefultsManger {
             return defaults.bool(forKey: UserDefaultsKeys.isLogedIn )
         }
     }
-    
     var email: String  {
         set {
             defaults.set(newValue, forKey: UserDefaultsKeys.email )
@@ -41,17 +42,13 @@ class UserDefultsManger {
             return defaults.string(forKey: UserDefaultsKeys.email )!
         }
     }
-    
     func setUserDefaults(user: User){
-        
         let encoder = JSONEncoder()
         if let encoded = try? encoder.encode(user) {
             UserDefaults.standard.set(encoded, forKey: "User" )
         }
     }
-    
     func getUserDefaults() -> User? {
-        
         if let savedUser = UserDefaults.standard.object(forKey: "User" ) as? Data {
             let decoder = JSONDecoder()
             if let loadedUser = try? decoder.decode(User.self, from: savedUser) {

@@ -11,7 +11,7 @@ import MapKit
 
 // MARK: - MapCenterDelegate Protocol.
 protocol MapCenterDelegate {
-    func setDelailLocationInAddress(delailsAddress: String,tag:Int)
+    func setDelailLocationInAddress(delailsAddress: String, tag: Int)
 }
 
 class MapCenterVC: UIViewController {
@@ -20,14 +20,15 @@ class MapCenterVC: UIViewController {
     @IBOutlet weak var mapView: MKMapView!
     @IBOutlet weak var userLocationLabel: UILabel!
     
-    // MARK: - Variables.
+    // MARK:- Properties
     var delegate: MapCenterDelegate?
     lazy var geocoder = CLGeocoder()
     var tag = 0
     
-    // MARK: - LifeCycle Methods.
+    // MARK: - Lifecycle Methods.
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
     }
     override func viewWillAppear(_ animated: Bool) {
         self.navigationController?.navigationBar.isHidden = true
@@ -42,24 +43,18 @@ class MapCenterVC: UIViewController {
     }
 }
 
-
 // MARK: - MKMapViewDelegate Extension.
 extension MapCenterVC: MKMapViewDelegate {
-    
     func mapView(_ mapView: MKMapView, regionDidChangeAnimated animated: Bool) {
            let center = mapView.centerCoordinate
-           print(center)
            getNameOfLocation(lat: center.latitude, long: center.longitude)
-       }
+    }
 }
 
 // MARK: - MapCenterVC Extension.
 extension MapCenterVC {
-    
     private func getNameOfLocation(lat:CLLocationDegrees,long:CLLocationDegrees) {
-        
         let location = CLLocation(latitude: lat, longitude: long)
-        
         // Geocode Location
         geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
             // Process Response
@@ -67,7 +62,6 @@ extension MapCenterVC {
         }
     }
     private func processResponse(withPlacemarks placemarks: [CLPlacemark]?, error: Error?) {
-        
         if error != nil {
             userLocationLabel.text = "Unable to Find Address for Location"
         } else {

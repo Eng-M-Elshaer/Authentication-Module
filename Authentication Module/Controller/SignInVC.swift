@@ -14,10 +14,10 @@ class SignInVC: UIViewController {
     @IBOutlet weak var emailTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     
-    // MARK: - Variables.
+    // MARK:- Properties
     var user = UserDefultsManger.shared().getUserDefaults()
     
-    // MARK: - LifeCycle Methods.
+    // MARK: - Lifecycle Methods.
     override func viewDidLoad() {
         super.viewDidLoad()
     }
@@ -29,10 +29,10 @@ class SignInVC: UIViewController {
     }
     
     // MARK: - Actions.
-    @IBAction func createAccountBtnPressed(_ sender: UIButton) {
+    @IBAction func createAccountBtnTapped(_ sender: UIButton) {
         goToSignUpVC()
     }
-    @IBAction func signInBtnPressed(_ sender: UIButton) {
+    @IBAction func signInBtnTapped(_ sender: UIButton) {
         if isVaildData() {
             if isValidEmail(email: emailTextField.text) {
                 if isUserDataVaild() {
@@ -65,13 +65,13 @@ extension SignInVC {
         return true
     }
     private func goToProfileVC(){
-        let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: ViewController.profileVC ) as! ProfileVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        let mainStoryBoard = UIStoryboard(name: StoryBoard.main, bundle: nil)
+        let profileVC = mainStoryBoard.instantiateViewController(withIdentifier: ViewController.profileVC ) as! ProfileVC
+        self.navigationController?.pushViewController(profileVC, animated: true)
     }
     private func goToSignUpVC(){
-        let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: ViewController.signUpVC ) as! SignUpVC
-        self.navigationController?.pushViewController(vc, animated: true)
+        let mainStoryBoard = UIStoryboard(name: StoryBoard.main, bundle: nil)
+        let signUpVC = mainStoryBoard.instantiateViewController(withIdentifier: ViewController.signUpVC ) as! SignUpVC
+        self.navigationController?.pushViewController(signUpVC, animated: true)
     }
 }

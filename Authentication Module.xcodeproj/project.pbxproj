@@ -87,6 +87,14 @@
 			path = Utilities;
 			sourceTree = "<group>";
 		};
+		E23762A8259A124300FF24FA /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				E2E045B9247BF80B002644F4 /* AppDelegate.swift */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
 		E253ED792578221100537075 /* Asset */ = {
 			isa = PBXGroup;
 			children = (
@@ -133,7 +141,7 @@
 		E2E045B8247BF80B002644F4 /* Authentication Module */ = {
 			isa = PBXGroup;
 			children = (
-				E2E045B9247BF80B002644F4 /* AppDelegate.swift */,
+				E23762A8259A124300FF24FA /* Shared */,
 				E2E045CF247BF882002644F4 /* Model */,
 				E2E045CC247BF84D002644F4 /* Controller */,
 				E2E045D6247C07B2002644F4 /* Extension */,

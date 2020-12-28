@@ -15,7 +15,7 @@ struct UserDefaultsKeys {
     static var user = "UDKuser"
 }
 
-// MARK: - StoryBoard.
+// MARK: - Storyboard.
 struct StoryBoard {
     static var main = "Main"
 }
