@@ -27,4 +27,5 @@ struct ViewController {
     static var mapCenterVC = "MapCenterVC"
     static var signInVC = "SignInVC"
     static var profileVC = "ProfileVC"
+    static var mapWithCurrentLocationVC = "MapWithCurrentLocationVC"
 }

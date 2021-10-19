@@ -45,7 +45,7 @@ class SignUpVC: UITableViewController {
     }
     @IBAction func addressBtnTapped(_ sender: UIButton) {
         let sb = UIStoryboard(name: StoryBoard.main, bundle: nil)
-        let vc = sb.instantiateViewController(withIdentifier: ViewController.mapCenterVC) as! MapCenterVC
+        let vc = sb.instantiateViewController(withIdentifier: ViewController.mapWithCurrentLocationVC) as! MapWithCurrentLocationVC
         vc.delegate = self
         vc.tag = sender.tag
         self.navigationController?.pushViewController(vc, animated: true)
@@ -84,8 +84,24 @@ extension SignUpVC:UIImagePickerControllerDelegate,UINavigationControllerDelegat
     }
 }
 
+//// MARK: - MapCenterDelegate Extension.
+//extension SignUpVC: MapCenterDelegate {
+//    func setDelailLocationInAddress(delailsAddress: String, tag: Int) {
+//        switch tag {
+//        case 1:
+//            userAddressOneTextField.text = delailsAddress
+//        case 2:
+//            userAddressTwoTextField.text = delailsAddress
+//        case 3:
+//            userAddressThreeTextField.text = delailsAddress
+//        default:
+//            print("Error In Tags")
+//        }
+//    }
+//}
+
 // MARK: - MapCenterDelegate Extension.
-extension SignUpVC: MapCenterDelegate {
+extension SignUpVC: MapWithCurrentLocationDelegate {
     func setDelailLocationInAddress(delailsAddress: String, tag: Int) {
         switch tag {
         case 1:
