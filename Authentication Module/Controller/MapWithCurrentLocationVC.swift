@@ -30,6 +30,7 @@ class MapWithCurrentLocationVC: UIViewController {
     //MARK:- Lifecycle Methods
     override func viewDidLoad() {
         super.viewDidLoad()
+        mapView.delegate = self
         checkLocationServices()
     }
     override func viewWillAppear(_ animated: Bool) {

@@ -891,9 +891,6 @@
                         <subviews>
                             <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="xJE-O8-lrM">
                                 <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                                <connections>
-                                    <outlet property="delegate" destination="2op-1n-6A3" id="fNw-4V-pYW"/>
-                                </connections>
                             </mapView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="An7-SA-Vdj">
                                 <rect key="frame" x="20" y="806" width="374" height="36"/>
@@ -943,7 +940,7 @@
                         </constraints>
                     </view>
                     <connections>
-                        <outlet property="mapView" destination="xJE-O8-lrM" id="C9H-aE-KAJ"/>
+                        <outlet property="mapView" destination="xJE-O8-lrM" id="2xK-xZ-Aqi"/>
                         <outlet property="userLocationLabel" destination="Zrq-38-GPr" id="DLO-Ef-UEq"/>
                     </connections>
                 </viewController>
