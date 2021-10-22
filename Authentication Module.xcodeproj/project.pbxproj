@@ -25,6 +25,7 @@
 		E2E045E4247C1BF7002644F4 /* String+Trimed.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045E3247C1BF7002644F4 /* String+Trimed.swift */; };
 		E2E045E6247C1D64002644F4 /* UIViewController+Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2E045E5247C1D64002644F4 /* UIViewController+Alert.swift */; };
 		E2F0FEF8271F0B50006F25D0 /* MapWithCurrentLocationVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0FEF7271F0B50006F25D0 /* MapWithCurrentLocationVC.swift */; };
+		E2F0FF052722DE31006F25D0 /* MapScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E2F0FF042722DE31006F25D0 /* MapScreenVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		E2E045E3247C1BF7002644F4 /* String+Trimed.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Trimed.swift"; sourceTree = "<group>"; };
 		E2E045E5247C1D64002644F4 /* UIViewController+Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+Alert.swift"; sourceTree = "<group>"; };
 		E2F0FEF7271F0B50006F25D0 /* MapWithCurrentLocationVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapWithCurrentLocationVC.swift; sourceTree = "<group>"; };
+		E2F0FF042722DE31006F25D0 /* MapScreenVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapScreenVC.swift; sourceTree = "<group>"; };
 		E4E92B83C5F89978B1A0B9F8 /* Pods-Authentication Module.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Authentication Module.release.xcconfig"; path = "Target Support Files/Pods-Authentication Module/Pods-Authentication Module.release.xcconfig"; sourceTree = "<group>"; };
 		E9F6F1E7317F853411A6C1C2 /* Pods_Authentication_Module.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Authentication_Module.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -168,6 +170,7 @@
 			isa = PBXGroup;
 			children = (
 				E253ED7F257822CB00537075 /* SignUpVC.swift */,
+				E2F0FF042722DE31006F25D0 /* MapScreenVC.swift */,
 				E253ED85257822DC00537075 /* MapCenterVC.swift */,
 				E253ED84257822DC00537075 /* MapVC.swift */,
 				E2F0FEF7271F0B50006F25D0 /* MapWithCurrentLocationVC.swift */,
@@ -316,6 +319,7 @@
 				E2E045E4247C1BF7002644F4 /* String+Trimed.swift in Sources */,
 				E26022A3249009F500519D7E /* CLPlacemark+CompactAddress.swift in Sources */,
 				E2F0FEF8271F0B50006F25D0 /* MapWithCurrentLocationVC.swift in Sources */,
+				E2F0FF052722DE31006F25D0 /* MapScreenVC.swift in Sources */,
 				E2E045BA247BF80B002644F4 /* AppDelegate.swift in Sources */,
 				E253ED86257822DC00537075 /* SignInVC.swift in Sources */,
 				E253ED88257822DC00537075 /* MapCenterVC.swift in Sources */,
